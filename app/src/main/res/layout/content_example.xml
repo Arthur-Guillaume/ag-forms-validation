@@ -22,7 +22,17 @@
         <com.arthurguillaume.android.agformsvalidation.ValidatedTextInput
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:hint="first name"
             app:input_type="not_empty_text" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <com.arthurguillaume.android.agformsvalidation.ValidatedTextInput
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                app:input_type="email" />
+        </RelativeLayout>
 
         <Button
             android:layout_width="wrap_content"
