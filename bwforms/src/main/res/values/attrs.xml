@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="errorMessage" format="string" />
+    <declare-styleable name="ValidatedTextInput">
+        <attr name="input_type" format="integer">
+            <enum name="plain_text" value="0" />
+            <enum name="not_empty_text" value="1" />
+            <enum name="phone_number" value="2" />
+            <enum name="zip_code" value="3" />
+            <enum name="email" value="4" />
+        </attr>
+        <attr name="errorMessage" />
+    </declare-styleable>
+
+    <declare-styleable name="CheckBoxGroup">
+        <attr name="isMultipleSelectionAllowed" format="boolean" />
+        <attr name="isEmptySelectionAllowed" format="boolean" />
+        <attr name="errorMessage" />
+    </declare-styleable>
+</resources>
