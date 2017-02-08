@@ -1,4 +1,4 @@
-package com.buzznative.android.bwforms;
+package com.arthurguillaume.android.agformsvalidation;
 
 /**
  * Any input that can be validated.

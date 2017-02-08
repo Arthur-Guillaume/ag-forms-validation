@@ -1,4 +1,4 @@
-package com.buzznative.android.bwforms;
+package com.arthurguillaume.android.agformsvalidation;
 
 /**
  * Used to represent a input text which can be validated using a regex

@@ -1,4 +1,4 @@
-package com.buzznative.android.bwforms;
+package com.arthurguillaume.android.agformsvalidation;
 
 import android.app.AlertDialog;
 import android.content.Context;
