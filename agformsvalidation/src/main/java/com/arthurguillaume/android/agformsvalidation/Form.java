@@ -36,8 +36,11 @@ public class Form extends LinearLayout {
      */
     public List<IValidatedInput> getChildren(ViewGroup vg) {
         List<IValidatedInput> list = new LinkedList<>();
-        for (int i = 0; i < vg.getChildCount(); i++) {
-            View v = vg.getChildAt(i);
+        int i = 0;
+        View v;
+        while ((v = vg.getChildAt(i++)) != null) {
+        //for (int i = 0; i < vg.getChildCount(); i++) {
+            // View v = vg.getChildAt(i);
             if (v instanceof IValidatedInput) {
                 list.add((IValidatedInput) v);
             } else if (v instanceof ViewGroup) {

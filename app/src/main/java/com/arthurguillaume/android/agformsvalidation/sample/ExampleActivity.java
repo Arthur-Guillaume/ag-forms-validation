@@ -9,6 +9,7 @@ import android.view.View;
 
 import com.arthurguillaume.android.agformsvalidation.Form;
 
+
 public class ExampleActivity extends AppCompatActivity {
 
     protected Form form;
