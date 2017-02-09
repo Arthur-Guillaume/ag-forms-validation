@@ -34,6 +34,20 @@
                 app:input_type="email" />
         </RelativeLayout>
 
+        <com.arthurguillaume.android.agformsvalidation.ValidatedTextInput
+            android:id="@+id/pwd_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            app:input_type="not_empty_text"
+            android:inputType="textPassword" />
+        <com.arthurguillaume.android.agformsvalidation.PasswordConfirmationInput
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:confirm_password="@id/pwd_field"
+            android:hint="Password confirmation"
+            android:inputType="textPassword" />
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

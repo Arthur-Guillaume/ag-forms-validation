@@ -12,6 +12,11 @@
         <attr name="errorMessage" />
     </declare-styleable>
 
+    <declare-styleable name="PasswordConfirmationInput">
+        <attr name="confirm_password" format="reference" />
+        <attr name="errorMessage" />qsddsqf
+    </declare-styleable>
+
     <declare-styleable name="CheckBoxGroup">
         <attr name="isMultipleSelectionAllowed" format="boolean" />
         <attr name="isEmptySelectionAllowed" format="boolean" />

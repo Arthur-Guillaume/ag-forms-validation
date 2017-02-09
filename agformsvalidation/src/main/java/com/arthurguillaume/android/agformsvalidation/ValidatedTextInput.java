@@ -36,7 +36,7 @@ public class ValidatedTextInput extends EditText implements ITextValidatedInput 
     private String errorMessage;
 
     /**
-     * Constructor called when instanciating from xml
+     * Constructor called when instantiating from xml
      *
      * @param context the context of the activity linked to the view
      * @param attrs   the attributes defined in xml
