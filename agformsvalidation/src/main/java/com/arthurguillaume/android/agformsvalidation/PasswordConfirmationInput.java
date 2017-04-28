@@ -2,6 +2,7 @@ package com.arthurguillaume.android.agformsvalidation;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.support.v7.widget.AppCompatEditText;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +13,7 @@ import android.widget.EditText;
  * Created by Arthur Guillaume on 09/02/2017.
  */
 
-public class PasswordConfirmationInput extends EditText implements IValidatedInput {
+public class PasswordConfirmationInput extends AppCompatEditText implements IValidatedInput {
 
     private String errorMessage;
     private int referencedField;

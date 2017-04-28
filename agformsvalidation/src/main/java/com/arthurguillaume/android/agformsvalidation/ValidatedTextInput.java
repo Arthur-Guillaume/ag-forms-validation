@@ -2,15 +2,21 @@ package com.arthurguillaume.android.agformsvalidation;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.support.v7.widget.AppCompatEditText;
 import android.util.AttributeSet;
-import android.widget.EditText;
+
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
 
 
 /**
  * Text input which can manage a validation scheme
  * Created by Arthur on 23/11/2015.
  */
-public class ValidatedTextInput extends EditText implements ITextValidatedInput {
+public class ValidatedTextInput extends AppCompatEditText implements ITextValidatedInput {
     /**
      * No validation
      */
@@ -31,6 +37,10 @@ public class ValidatedTextInput extends EditText implements ITextValidatedInput 
      * a valid email address
      */
     public static final int EMAIL = 4;
+    /**
+     * a valid date
+     */
+    public static final int DATE = 5;
 
     private int validationType;
     private String errorMessage;
@@ -85,6 +95,9 @@ public class ValidatedTextInput extends EditText implements ITextValidatedInput 
             case EMAIL:
                 msg = "L'e-mail n'est pas valide";
                 break;
+            case DATE:
+                msg = "La date n'est pas valide";
+                break;
             default:
                 msg = "Un champ n'est pas valide.";
                 break;
@@ -94,7 +107,19 @@ public class ValidatedTextInput extends EditText implements ITextValidatedInput 
 
     @Override
     public boolean isValid() {
-        return getText().toString().matches(getValidationRegEx());
+        if (validationType == DATE) {
+            DateFormat format = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
+            Date date;
+            try {
+                date = format.parse(getText().toString());
+            } catch (ParseException e) {
+                System.err.println("Failed to parse date");
+                return false;
+            }
+            return date != null;
+        } else {
+            return getText().toString().matches(getValidationRegEx());
+        }
     }
 
     @Override
