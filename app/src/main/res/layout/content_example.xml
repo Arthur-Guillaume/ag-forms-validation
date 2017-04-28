@@ -24,9 +24,11 @@
             android:layout_height="wrap_content"
             android:hint="first name"
             app:input_type="not_empty_text" />
+
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
+
             <com.arthurguillaume.android.agformsvalidation.ValidatedTextInput
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -39,14 +41,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Password"
-            app:input_type="not_empty_text"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            app:input_type="not_empty_text" />
+
         <com.arthurguillaume.android.agformsvalidation.PasswordConfirmationInput
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:confirm_password="@id/pwd_field"
             android:hint="Password confirmation"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            app:confirm_password="@id/pwd_field" />
+
+        <com.arthurguillaume.android.agformsvalidation.ValidatedCheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:required="true"
+            android:text="Cette checkbox est obligatoire" />
 
         <Button
             android:layout_width="wrap_content"
