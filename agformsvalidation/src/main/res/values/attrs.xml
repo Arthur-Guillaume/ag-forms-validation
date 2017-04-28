@@ -14,7 +14,7 @@
 
     <declare-styleable name="PasswordConfirmationInput">
         <attr name="confirm_password" format="reference" />
-        <attr name="errorMessage" />qsddsqf
+        <attr name="errorMessage" />
     </declare-styleable>
 
     <declare-styleable name="CheckBoxGroup">
