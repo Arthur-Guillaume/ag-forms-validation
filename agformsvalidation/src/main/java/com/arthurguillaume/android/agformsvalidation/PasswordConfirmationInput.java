@@ -28,9 +28,11 @@ public class PasswordConfirmationInput extends AppCompatEditText implements IVal
         super(context, attrs);
         TypedArray attributes = context.obtainStyledAttributes(attrs, R.styleable.PasswordConfirmationInput);
         referencedField = attributes.getResourceId(R.styleable.PasswordConfirmationInput_confirm_password, NO_ID);
-        String userDefinedErrorMessage = attributes.getString(R.styleable.CheckBoxGroup_errorMessage);
+        String userDefinedErrorMessage = attributes.getString(R.styleable.ValidatedTextInput_errorMessage);
         if (userDefinedErrorMessage != null) {
             errorMessage = userDefinedErrorMessage;
+        } else {
+            errorMessage = null;
         }
         attributes.recycle();
     }
